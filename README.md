@@ -1,68 +1,90 @@
-## Website Viewer Enhancement Tool with PHP (For Testing and Education Purposes)
+# MATA: Penambah Viewer Website
 
-Welcome to a simple PHP-based tool to increase website views. This tool can be run on various platforms including Termux on Android, Linux terminal, and Windows Command Prompt. Please note that this tool is **intended solely for testing and educational purposes**. We emphasize that using this tool for illegal or harmful purposes is strictly prohibited.
+**MATA Tool** adalah script PHP yang dirancang untuk menguji pengiriman traffic ke URL tertentu menggunakan proxy. Script ini mendukung terminal Linux/macOS dan menawarkan tampilan berwarna untuk kemudahan pemantauan.
 
-**screnshoot:**
+## Fitur Utama
+- Mendukung pengiriman traffic menggunakan proxy.
+- Kompatibel dengan Blogspot untuk meningkatkan kemungkinan keberhasilan.
+- Tampilan berwarna di terminal untuk memantau status eksekusi.
+- Dapat menangani beberapa request secara bersamaan dengan konfigurasi yang fleksibel.
 
-![1](https://raw.githubusercontent.com/wanzxploit/bot-visitor/main/visitor.png)
+## Peringatan
+**Penting!** Script ini hanya untuk keperluan edukasi dan pengujian. Penggunaan untuk tujuan ilegal, seperti manipulasi trafik secara tidak sah, dapat melanggar hukum atau kebijakan layanan tertentu. Gunakan dengan tanggung jawab.
 
-### Installation Requirements:
+## Cara Install di Termux dan Linux
+### Persiapan Awal
+1. **Update & Upgrade Sistem**:
+   ```bash
+   sudo apt update && sudo apt upgrade -y
+   ```
+   Untuk Termux:
+   ```bash
+   pkg update && pkg upgrade -y
+   ```
 
-#### Termux (Android):
-1. Open Termux.
-2. Install required packages with the following command:
+2. **Install PHP**:
+   Di Linux:
+   ```bash
+   sudo apt install php -y
+   ```
+   Di Termux:
+   ```bash
+   pkg install php -y
+   ```
 
-```bash
-pkg install git php curl
-```
+3. **Install Git** (jika belum terpasang):
+   Di Linux:
+   ```bash
+   sudo apt install git -y
+   ```
+   Di Termux:
+   ```bash
+   pkg install git -y
+   ```
 
-#### Linux:
-1. Open the terminal.
-2. Install required packages based on your distribution:
+### Unduh Script
+1. Clone repository menggunakan Git:
+   ```bash
+   git clone https://github.com/wanzxploit/MATA.git
+   cd MATA
+   ```
 
-```bash
-# For Debian/Ubuntu
-sudo apt-get install git php curl
+2. Pastikan file `visitor.php` dan `proxy.txt` ada di direktori yang sama.
 
-# For Fedora
-sudo dnf install git php curl
+### Konfigurasi Proxy (optional)
+1. Buka file `proxy.txt` dan tambahkan daftar proxy (setiap proxy dipisahkan dengan koma atau per baris).
+2. Contoh format:
+   ```
+   123.45.67.89:8080
+   98.76.54.32:3128
+   ```
 
-# For CentOS
-sudo yum install git php curl
-```
+### Jalankan Script
+1. Eksekusi script dengan perintah:
+   ```bash
+   php visitor.php
+   ```
+2. Masukkan URL target (disarankan Blogspot untuk hasil optimal).
+3. Masukkan jumlah visitor yang ingin diuji.
 
-#### Windows (Command Prompt):
-1. Open Command Prompt (CMD).
-2. Make sure you have installed Git, PHP, and cURL on your system.
+## Struktur File
+- **visitor.php**: Script utama.
+- **proxy.txt**: Berisi daftar proxy.
 
-### Usage Instructions on All Platforms:
+## Preview
+Berikut adalah contoh tampilan tools ini:
 
-1. Open a terminal according to your system (Termux, Linux, or Windows Command Prompt).
-2. Clone this tool's repository using Git:
+![Visitor Tool Preview](https://raw.githubusercontent.com/wanzxploit/MATA/refs/heads/main/visitor.png)
 
-```bash
-git clone https://github.com/wanzxploit/bot-visitor
-```
+## Tips untuk Hasil Optimal
+- Gunakan URL Blogspot karena layanan ini cenderung lebih toleran terhadap peningkatan traffic.
+- Pastikan proxy yang digunakan aktif dan tidak diblokir.
 
-3. Navigate to the tool's directory with the following command:
+## Kontak
+- **GitHub**: [Wanz Xploit](https://github.com/wanzxploit)
+- **Instagram**: [@wanz_xploit](https://instagram.com/wanz_xploit)
+- **YouTube**: [Wanz Xploit](https://youtube.com/wanzxploit)
 
-```bash
-cd bot-visitor
-```
+## Disclaimer
+Script ini dibuat untuk tujuan edukasi. Penulis tidak bertanggung jawab atas penggunaan script untuk pelanggaran hukum atau kebijakan layanan tertentu.
 
-4. Run the tool using the command:
-
-```bash
-php visitor.php
-```
-
-### Disclaimer:
-
-This tool is **only** meant for testing and educational purposes. Using this tool to manipulate website visit statistics illegally or harmfully is a violation of law and ethics. We are not responsible for any unlawful or harmful use of this tool.
-
-We value integrity and ethics in technology usage. Please use this tool wisely and in accordance with applicable guidelines.
-
-Thank you for using this website viewer enhancement tool for testing and education purposes. If you have any further questions or feedback, feel free to contact us.
-
----
-**Note**: Ensure you have replaced the repository URL in step 2 according to your needs. Be sure not to misuse this tool and adhere to ethical technology usage.
